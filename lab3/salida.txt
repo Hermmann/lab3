@@ -1,0 +1,21 @@
+Componentes Léxicos:
+par-a = (
+par-a = (
+num1 = 101
+op-and = and
+op-or = or | syntax error
+num2 = 01 | syntax error
+par-c = ) | syntax error
+op-or = or | syntax error
+par-a = ( | syntax error
+num3 = 110 | syntax error
+op-xor = xor | syntax error
+num4 = 11 | syntax error
+par-c = ) | syntax error
+par-c = ) | syntax error
+par-c = ) | syntax error
+op-mult = * | syntax error
+num5 = 10 | syntax error
+
+Análisis Sintáctico
+Errores Sintácticos: 13
