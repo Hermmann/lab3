@@ -56,15 +56,16 @@ extern int yydebug;
     YYUNDEF = 257,                 /* "invalid token"  */
     NUMBER = 258,                  /* NUMBER  */
     SUM = 259,                     /* SUM  */
-    RES = 260,                     /* RES  */
+    MENOS = 260,                   /* MENOS  */
     MUL = 261,                     /* MUL  */
     DIV = 262,                     /* DIV  */
-    PARA = 263,                    /* PARA  */
-    PARC = 264,                    /* PARC  */
-    OR = 265,                      /* OR  */
-    AND = 266,                     /* AND  */
-    XOR = 267,                     /* XOR  */
-    NOT = 268                      /* NOT  */
+    OR = 263,                      /* OR  */
+    AND = 264,                     /* AND  */
+    XOR = 265,                     /* XOR  */
+    NOT = 266,                     /* NOT  */
+    PARA = 267,                    /* PARA  */
+    PARC = 268,                    /* PARC  */
+    RES = 269                      /* RES  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -75,19 +76,28 @@ extern int yydebug;
 #define YYUNDEF 257
 #define NUMBER 258
 #define SUM 259
-#define RES 260
+#define MENOS 260
 #define MUL 261
 #define DIV 262
-#define PARA 263
-#define PARC 264
-#define OR 265
-#define AND 266
-#define XOR 267
-#define NOT 268
+#define OR 263
+#define AND 264
+#define XOR 265
+#define NOT 266
+#define PARA 267
+#define PARC 268
+#define RES 269
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+union YYSTYPE
+{
+#line 13 "a_sintactico.y"
+char * s;
+
+#line 98 "y.tab.h"
+
+};
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
