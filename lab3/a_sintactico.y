@@ -10,7 +10,7 @@
     int errSin = 0;
 %}
 
-GIT
+%token NUMBER SUM RES MUL DIV PARA PARC OR AND XOR NOT
 
 %%
 
@@ -19,22 +19,23 @@ statement : expression { } // '\n'
           ;
 
 
-expression:   NUMBER                       
-            | expression SUM expression  
-            | expression RES expression  
-            | expression MUL expression  
-            | expression DIV expression  
-            | PARA expression PARC       
-
-            | expression OR expression   
-            | expression AND expression  
-            | expression XOR expression  
-            | NOT expression             
-
+expression:  |expression SUM expression 
+             |expression RES expression
+             | expression MUL expression
+             | expression DIV expression
+             | expression OR expression
+             | expression AND expression
+             | expression XOR expression
+             | NOT expression 
+             | PARA expression PARC
+             | NUMBER
+            
             ;
+
        
 %%
 
+ 
 /***
 expression: | expression SUM expression 
             | expression RES expression
