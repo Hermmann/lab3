@@ -576,8 +576,8 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    18,    18,    19,    24,    25,    26,    27,    28,    29,
-      31,    32,    33,    34
+       0,    18,    18,    19,    23,    24,    25,    26,    27,    28,
+      30,    31,    32,    33
 };
 #endif
 
@@ -1356,7 +1356,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 38 "a_sintactico.y"
+#line 37 "a_sintactico.y"
 
 
 void yyerror(char *s) {

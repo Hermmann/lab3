@@ -20,21 +20,20 @@ statement : expression { } // '\n'
           ;
 
 
-expression:
-        NUMBER                       
-        | expression SUM expression  
-        | expression RES expression  
-        | expression MUL expression  
-        | expression DIV expression  
-        | PARA expression PARC       
+expression:  NUMBER                       
+            | expression SUM expression  
+            | expression RES expression  
+            | expression MUL expression  
+            | expression DIV expression  
+            | PARA expression PARC       
 
-        | expression OR expression   
-        | expression AND expression  
-        | expression XOR expression  
-        | NOT expression             
+            | expression OR expression   
+            | expression AND expression  
+            | expression XOR expression  
+            | NOT expression             
 
-        ;
-
+            ;
+       
 %%
 
 void yyerror(char *s) {
